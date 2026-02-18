@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chahed Issaoui & Souhayel Jellali - Our School Love Story</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #ffebee;
+            margin: 0;
+            padding: 0;
+            color: #c2185b;
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(to bottom, #d81b60, #ad1457);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3.5em;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+        }
+        header p {
+            font-size: 1.8em;
+            font-style: italic;
+            margin-top: 10px;
+        }
+        section {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 30px;
+            background: #fffaf0;
+            box-shadow: 0 0 15px rgba(194,24,91,0.3);
+            border-radius: 20px;
+            border: 1px solid #f8bbd0;
+        }
+        h2 {
+            color: #880e4f;
+            border-bottom: 3px dashed #f48fb1;
+            padding-bottom: 15px;
+            text-align: center;
+            font-size: 2.2em;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .gallery img {
+            width: 320px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 0 8px rgba(194,24,91,0.4);
+            transition: transform 0.4s, box-shadow 0.4s;
+            border: 3px solid #ffc1e3;
+        }
+        .gallery img:hover {
+            transform: scale(1.08) rotate(3deg);
+            box-shadow: 0 0 20px rgba(216,27,96,0.6);
+        }
+        .stories p {
+            font-size: 1.3em;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            text-align: justify;
+            font-style: italic;
+            color: #880e4f;
+        }
+        .music {
+            text-align: center;
+            margin-top: 40px;
+        }
+        iframe {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(194,24,91,0.3);
+            width: 100%;
+            max-width: 600px;
+            height: 350px;
+        }
+        #modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(216, 27, 96, 0.92);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            flex-direction: column;
+            color: white;
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        #modal h2 {
+            color: white;
+            border: none;
+            margin-bottom: 30px;
+        }
+        .buttons button {
+            font-size: 2em;
+            padding: 15px 40px;
+            margin: 20px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        #yesBtn {
+            background: #4caf50;
+            color: white;
+        }
+        #noBtn {
+            background: #f44336;
+            color: white;
+        }
+        .hearts {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 999;
+        }
+        .heart {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background: #e91e63;
+            transform: rotate(45deg);
+            animation: float 6s linear infinite;
+            box-shadow: 0 0 10px #e91e63;
+        }
+        .heart:before,
+        .heart:after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background: #e91e63;
+            border-radius: 50%;
+        }
+        .heart:before { top: -12.5px; left: 0; }
+        .heart:after { top: 0; left: -12.5px; }
+        @keyframes float {
+            0% { transform: translateY(110vh) rotate(45deg); opacity: 1; }
+            100% { transform: translateY(-20vh) rotate(45deg); opacity: 0; }
+        }
+        #content {
+            opacity: 0;
+            transition: opacity 1.5s ease;
+        }
+        #content.visible {
+            opacity: 1;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="modal">
+        <h2>Do you love Souhayel?</h2>
+        <div class="buttons">
+            <button id="yesBtn">Yes</button>
+            <button id="noBtn">No</button>
+        </div>
+    </div>
+    <div class="hearts"></div>
+    <div id="content">
+        <header>
+            <h1>Chahed Issaoui & Souhayel Jellali</h1>
+            <p>Almost 3 Years of Schoolyard Love – All Started in the Class at Lycée Mixte, Sidi Bouzid</p>
+        </header>
+        <section id="about">
+            <h2>Our Pure School Love Story</h2>
+            <p>Hello, I am Chahed Issaoui, and my heart has belonged to Souhayel Jellali since our days at Lycée Mixte in Sidi Bouzid, Tunisia. Our love story is simple, sweet, and completely born in the classroom – almost 3 years ago, a shared glance during lessons turned into secret smiles, whispered conversations, and notes passed under desks. No grand trips, no deserts or camels – just us, growing closer every day right there in class, in the hallways, and after school in our beloved city of Sidi Bouzid.</p>
+        </section>
+        <section id="gallery">
+            <h2>Memories from Our School Days</h2>
+            <div class="gallery">
+                <img src="img/" alt="Tunisian high school classroom full of students">
+                <img src="img/Screenshot 2026-02-18 000803.png" alt="Students focused in a Tunisian classroom">
+                <img src="img/Screenshot 2026-02-18 000816.png" alt="Group of Tunisian students working together in class">
+                <img src="img/Screenshot 2026-02-18 000830.png" alt="Young couple studying close in Tunisian school">
+                <img src="img/Screenshot 2026-02-18 000851.png" alt="Students writing in a classroom exam setting">
+                <img src="img/Screenshot 2026-02-18 000904.png" alt="Young romantic couple holding hands smiling">
+            </div>
+        </section>
+        <section id="stories" class="stories">
+            <h2>Chapters of Our Classroom Love</h2>
+            <p>Our First Spark in Class: Almost 3 years ago, right here at Lycée Mixte in Sidi Bouzid, everything began during a regular lesson. I caught Souhayel looking at me across the desks, and that shy smile changed everything. From then on, we found ways to sit closer, share jokes quietly, and pass little notes when the teacher wasn't looking – pure school love in every sense.</p>
+            <p>Daily Moments in the Classroom: Our "trips" were just moving seats to be nearer, stealing glances during breaks, helping each other with homework in class, and waiting for each other after lessons. No need for faraway adventures – our world was the blackboard, the desks, and the hallways of Lycée Mixte, where our bond grew stronger day by day.</p>
+            <p>Life in Sidi Bouzid Together: After almost 3 years, we still cherish those school memories. Walking the familiar streets of Sidi Bouzid hand in hand, remembering how it all started in class, laughing about our old notes and secret signals. Souhayel remains my first and only love, born and raised right there in our school.</p>
+            <p>Our Promise Forever: One day after class, under the schoolyard tree, Souhayel told me he wanted us to be together always. With my heart racing like the first day we met in class, I said yes. Our love story continues from those classroom beginnings, stronger and sweeter every year.</p>
+        </section>
+        <section id="music" class="music">
+            <h2>Our Relaxing Love Melodies</h2>
+            <iframe id="musicPlayer" src="img/YTDown.com_YouTube_Short-Meditation-Music-3-Minute-Relaxati_Media_cI4ryatVkKw_001_720p.mp4" title="Relaxing Love Music" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        </section>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('modal');
+            const content = document.getElementById('content');
+            const yesBtn = document.getElementById('yesBtn');
+            const noBtn = document.getElementById('noBtn');
+            const player = document.getElementById('musicPlayer');
+            let fontSize = 2;
+            let scale = 1;
+
+            function createHeart() {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = (Math.random() * 4 + 4) + 's';
+                document.querySelector('.hearts').appendChild(heart);
+                setTimeout(() => heart.remove(), 6000);
+            }
+
+            setInterval(createHeart, 400);
+
+            noBtn.addEventListener('click', () => {
+                fontSize += 0.6;
+                scale += 0.25;
+                yesBtn.style.fontSize = fontSize + 'em';
+                yesBtn.style.transform = `scale(${scale})`;
+                noBtn.style.fontSize = Math.max(1.5, fontSize - 1.2) + 'em';
+            });
+
+            yesBtn.addEventListener('click', () => {
+                modal.style.display = 'none';
+                content.classList.add('visible');
+                document.body.style.overflow = 'auto';
+                player.src = player.src; // Trigger autoplay
+            });
+        });
+    </script>
+</body>
+</html>
